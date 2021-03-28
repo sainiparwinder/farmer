@@ -15,14 +15,14 @@
     function myFunction() {
       //console.log("heeeel");
       var data = '';
-      var gatte = document.getElementById("gatte").value;
-      var bharti = document.getElementById("bharti").value;
-      var rate = document.getElementById("rate").value;
-      var man = (gatte * bharti) / 40;
-      var quintal = (gatte * bharti) / 100
-      var rs = (gatte * bharti * rate) / 100;
+      var rs = document.getElementById("rs").value;
+      var dar = document.getElementById("dar").value;
+      var days = document.getElementById("days").value;
+      
+      var interest = (rs * dar * days) / 3000;
+      var total = parseInt(interest) + parseInt(rs);
 
-      data += '<table class="table"><thead class="thead-success"><tr><th scope="col"><img src="img/man.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/kuantal.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/rupaye.png" alt="..." class="img-thumbnail"></th></tr></thead><tbody><tr><td>' + man + '</td><td>' + quintal + '</td><td>' + rs + '</td></tr></tbody></table><br>';
+      data += '<table class="table"><thead class="thead-success"><tr><th scope="col"><img src="img/mooldhan.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/interest.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/total.png" alt="..." class="img-thumbnail"></th></tr></thead><tbody><tr><td>' + rs + '</td><td>' + interest + '</td><td>' + total + '</td></tr></tbody></table><br>';
 
       console.log("hello");
       document.getElementById("demo").innerHTML = data;
@@ -45,9 +45,8 @@
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="interest.html">interes <span class="sr-only">(current)</span></a>
-        </li>
-
+            <a class="nav-link" href="interest.html">Interest <span class="sr-only">(current)</span></a>
+          </li>
 
       </ul>
 
@@ -58,23 +57,23 @@
    
 
     <div class="form-group">
-      <label for="gatte"><img src="img/gatte.png" alt="..." class="img-thumbnail"></label>
-      <input type="text" class="form-control" id="gatte" name="gatte" placeholder="">
+      <label for="rs"><img src="img/rupaye.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="rs" name="rs" placeholder="">
 
     </div>
     <div class="form-group">
-      <label for="bharti"><img src="img/bharti.png" alt="..." class="img-thumbnail"></label>
-      <input type="text" class="form-control" id="bharti" name="bharti" placeholder="kg" >
+      <label for="dar"><img src="img/dar.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="dar" name="dar" placeholder="" >
     </div>
     <div class="form-group">
-      <label for="rate"><img src="img/qr.png" alt="..." class="img-thumbnail"></label>
-      <input type="text" class="form-control" id="rate" name="rate" placeholder="In quental">
+      <label for="days"><img src="img/din.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="days" name="days" placeholder="">
     </div>
 
 
     <button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button>
 
-
+    
 
   </div>
 
