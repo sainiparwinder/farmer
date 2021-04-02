@@ -20,9 +20,9 @@
       var days = document.getElementById("days").value;
       
       var interest = (rs * dar * days) / 3000;
-      var total = parseInt(interest) + parseInt(rs);
-
-      data += '<table class="table"><thead class="thead-success"><tr><th scope="col"><img src="img/mooldhan.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/interest.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/total.png" alt="..." class="img-thumbnail"></th></tr></thead><tbody><tr><td>' + rs + '</td><td>' + interest + '</td><td>' + total + '</td></tr></tbody></table><br>';
+      //var total = parseInt(interest) + parseInt(rs);
+        var total = Number(interest)+Number(rs);
+      data += '<div class="table-responsive-sm text-center"><table class="table"><thead class="thead-success"><tr class="table-danger"><th scope="col"><img src="img/mooldhan.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/interest.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/total.png" alt="..." class="img-thumbnail"></th></tr></thead><tbody><tr class="table-success"><td>' + rs + '</td><td>' + interest + '</td><td>' + total + '</td></tr></tbody></table><br></div';
 
       console.log("hello");
       document.getElementById("demo").innerHTML = data;
@@ -42,12 +42,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="gatte.html"><img src="img/gatte.png" alt="..." class="img-thumbnail"> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="interest.html">Interest <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="interest.html"><img src="img/interest.png" alt="..." class="img-thumbnail"> <span class="sr-only">(current)</span></a>
           </li>
-
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About Us<span class="sr-only">(current)</span></a>
+          </li>
       </ul>
 
   </nav>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var x = $("form").serializeArray();
+    var data='';
+    $.each(x, function(i, field){
+      $("#results").append(field.name + ":" + field.value + " ");
+      // data += '<tr><td>' + field.name + '</td><td>' + field.value + '</td></tr>';
+      data += '<table class="table"><thead class="thead-dark"><tr><th scope="col">MAN</th><th scope="col">QUINTAL</th><th scope="col">RS</th></tr></thead><tbody><tr><td>'+ field.name +'</td><td>'+ field.name +'</td><td>'+ field.name +'</td></tr></tbody></table>';
+      document.getElementById("demo").innerHTML = data;
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<form action="">
+  First name: <input type="text" name="FirstName" value="Mickey"><br>
+  Last name: <input type="text" name="LastName" value="Mouse"><br>
+</form>
+
+<button>Serialize form values</button>
+
+<div id="results"></div>
+
+<p id="demo"></p>
+
+
+</body>
+</html>

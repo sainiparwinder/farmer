@@ -21,7 +21,25 @@
  </style>
 
   <title>Farmer Calculator</title>
+  <script>
+    function myFunction() {
+      //console.log("heeeel");
+      var data = '';
+      var gatte = document.getElementById("gatte").value;
+      var bharti = document.getElementById("bharti").value;
+      var rate = document.getElementById("rate").value; 
+      var kille = document.getElementById("kille").value;
+      var man = (gatte * bharti) / 40;
+      var quintal = (gatte * bharti) / 100
+      var rs = (gatte * bharti * rate) / 100;
+      var average=man/kille;
 
+      data += '<div class="table-responsive-sm text-center"><table class="table"><thead class="thead-success"><tr class="table-danger"><th scope="col"><img src="img/man.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/kuantal.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/rupaye.png" alt="..." class="img-thumbnail"></th><th scope="col"><img src="img/average.png" alt="..." class="img-thumbnail"></th></tr></thead><tbody><tr class="table-success"><td>' + man + '</td><td>' + quintal + '</td><td>' + rs + '</td><td>' + average + '</td></tr></tbody></table><br></div';
+
+      console.log("hello");
+      document.getElementById("demo").innerHTML = data;
+    }
+  </script>
 </head>
 
 <body class="p-3 mb-2  text-dark">
@@ -42,17 +60,42 @@
           <a class="nav-link" href="interest.html"><img src="img/interest.png" alt="..." class="img-thumbnail"><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="about.html">About Us<span class="sr-only">(current)</span></a>
-        </li>
+            <a class="nav-link" href="about.html">About Us<span class="sr-only">(current)</span></a>
+          </li>
 
       </ul>
 
-  </nav>  
- </div>
-  <div class="text-center">
-    <img src="img/home.png" class="img-fluid" alt="Responsive image">
+  </nav>
+ 
+   
+      <p id="demo"></p>
+   
+
+    <div class="form-group">
+      <label for="gatte"><img src="img/gatte.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="gatte" name="gatte" placeholder="">
+
+    </div>
+    <div class="form-group">
+        <label for="kille"><img src="img/kille.png" alt="..." class="img-thumbnail"></label>
+        <input type="text" class="form-control" id="kille" name="kille" placeholder="">
+      </div>
+    <div class="form-group">
+      <label for="bharti"><img src="img/bharti.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="bharti" name="bharti" placeholder="" value=50 >
+    </div>
+    <div class="form-group">
+      <label for="rate"><img src="img/qr.png" alt="..." class="img-thumbnail"></label>
+      <input type="text" class="form-control" id="rate" name="rate" placeholder="" value=1975>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button>
+
+
+
   </div>
-</div>
 
 
 
